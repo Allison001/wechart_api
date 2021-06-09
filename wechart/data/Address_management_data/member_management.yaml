@@ -1,0 +1,44 @@
+creat_member:
+  - ["zhangsan",'三儿','136787804403',[1]]
+  - ['lisi','李四','13678780000',[1]]
+  - ['wangwu','王五','13678780001',[1]]
+
+ids:
+  - 'one'
+  - 'two'
+  - 'three'
+
+
+
+get_user:
+  - ["zhangsan",'三儿']
+  - ['lisi','李四']
+  - ['wangwu','王五']
+
+idsu:
+  - 'one'
+  - 'two'
+  - 'three'
+
+
+updata_user:
+  - ['zhangsan','三儿','136787804403',[1],'测试工程师']
+  - ['lisi','李四','13678780010',[1],'算法工程师']
+
+idsup:
+  - 'one'
+  - 'two'
+
+
+
+delete_user:
+  - 'zhangsan'
+  - 'lisi'
+  - 'wangwu'
+
+idsde:
+  - 'one'
+  - 'two'
+  - 'three'
+
+

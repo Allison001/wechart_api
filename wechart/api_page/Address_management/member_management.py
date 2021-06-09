@@ -1,5 +1,4 @@
-import requests
-from wechart.Address_management.base_page import BasePage
+from wechart.api_page.Address_management.base_page import BasePage
 
 """
 通讯录管理->成员管理
