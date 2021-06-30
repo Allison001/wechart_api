@@ -1,3 +1,4 @@
+#添加成员
 creat_member:
   - ["zhangsan",'三儿','136787804403',[1]]
   - ['lisi','李四','13678780000',[1]]
@@ -9,7 +10,7 @@ ids:
   - 'three'
 
 
-
+#读取成员
 get_user:
   - ["zhangsan",'三儿']
   - ['lisi','李四']
@@ -20,7 +21,7 @@ idsu:
   - 'two'
   - 'three'
 
-
+#更新成员
 updata_user:
   - ['zhangsan','三儿','136787804403',[1],'测试工程师']
   - ['lisi','李四','13678780010',[1],'算法工程师']
@@ -30,7 +31,7 @@ idsup:
   - 'two'
 
 
-
+#删除成员
 delete_user:
   - 'zhangsan'
   - 'lisi'
@@ -41,4 +42,27 @@ idsde:
   - 'two'
   - 'three'
 
+#批量删除成员--useridlist参数为空
+batch_delete_user:
+  - ["zhangsan",'三儿','136787804403',[1],[],40063]
+  - ['lisi','李四','13678780000',[1],[],40063]
+  - ['wangwu','王五','13678780001',[1], ["zhangsan",'lisi','wangwu'],0]
 
+ids_batch_delete_user:
+  - 'one'
+  - 'two'
+  - 'three'
+
+#获取部门成员
+get_department_user:
+  - [1,[],'ok']
+  - [1,[0],'ok']
+  - [1,[1],'ok']
+  - [3,[0],'ok']
+  - [3,[1],'ok']
+ids_get_department_user:
+  - 'one'
+  - 'two'
+  - 'three'
+  - 'four'
+  - 'five'
