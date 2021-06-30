@@ -78,12 +78,21 @@ class DepartmentManagement(BasePage):
 
     #获取部门成员详情
     def get_department_userlist(self,department_id,fetch_child):
+        '''
+        :param department_id: int 获取的部门id
+        :param fetch_child: int 1/0：是否递归获取子部门下面的成员
+        :return:
+        '''
         url = f'https://qyapi.weixin.qq.com/cgi-bin/user/list?department_id={department_id}&fetch_child={fetch_child}'
         r = self.req('get',url)
         return r.json()
 
     #userid与openid互换
     def convert_to_openid(self,userid):
+        '''
+        :param userid:  企业内的成员id
+        :return:
+        '''
         url = 'https://qyapi.weixin.qq.com/cgi-bin/user/convert_to_openid'
         body = {"userid": userid}
         r = self.req('post',url,json=body)
@@ -106,21 +115,30 @@ class DepartmentManagement(BasePage):
         '''
         url = 'https://qyapi.weixin.qq.com/cgi-bin/batch/invite'
         body = {
-               "user" : {user},
-               "party" : {party},
-               "tag" : {tag}}
+               "user" : user,
+               "party" : party,
+               "tag" : tag}
         r = self.req('post',url,json=body)
         return r.json()
 
 
     #获取加入企业二维码
     def get_join_qrcode(self,size_type):
+        '''
+        :param size_type: int qrcode尺寸类型，1: 171 x 171; 2: 399 x 399; 3: 741 x 741; 4: 2052 x 2052
+        :return:
+        '''
         url = f'https://qyapi.weixin.qq.com/cgi-bin/corp/get_join_qrcode?size_type={size_type}'
         r = self.req('get',url)
+        return r.json()
 
 
     #获取企业活跃成员数
     def get_active_stat(self,date):
+        '''
+        :param date: 具体某天的活跃人数，最长支持获取30天前数据 （例如："2020-03-27"）
+        :return:
+        '''
         url = 'https://qyapi.weixin.qq.com/cgi-bin/user/get_active_stat'
         body ={"date": date}
         r = self.req('post',url,json=body)

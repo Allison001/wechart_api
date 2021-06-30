@@ -36,7 +36,6 @@ delete_user:
   - 'zhangsan'
   - 'lisi'
   - 'wangwu'
-
 idsde:
   - 'one'
   - 'two'
@@ -66,3 +65,77 @@ ids_get_department_user:
   - 'three'
   - 'four'
   - 'five'
+
+#获取部门成员详情
+get_department_userlist:
+  - [1,[],'ok']
+  - [1,[0],'ok']
+  - [1,[1],'ok']
+  - [3,[0],'ok']
+  - [3,[1],'ok']
+ids_get_department_userlist:
+  - 'one'
+  - 'two'
+  - 'three'
+  - 'four'
+  - 'five'
+
+#userid与openid互换
+convert_to_openid:
+  - ['ZhangYing',0]
+  - ['haha',40003]
+ids_convert_to_openid:
+  - 'one'
+  - 'two'
+
+#二次验证
+second_confirm:
+  - ['ZhangYing',0]
+  - ['haha',40003]
+ids_second_confirm:
+  - 'one'
+  - 'two'
+
+#邀请成员
+invite_user:
+  - [[],[],[],81012]
+  - [['ZhangYing'],[],[],0]
+  - [['ZhangYing'],[1],[],0]
+  - [['ZhangYing'],[1,3],[18,19,20,21],0]
+  - [['ZhangYing','lisi'],[1],[],0]
+  - ['wangwu',[1],[],0]
+ids_invite_user:
+  - 'one'
+  - 'two'
+  - 'three'
+  - 'four'
+  - 'five'
+  - 'sex'
+
+# 获取加入企业二维码
+get_join_qrcode:
+  - [1,0]
+  - [2,0]
+  - [3,0]
+  - [4,0]
+  - [5,0]
+  - [0,0]
+  - [NUll,0]
+ids_get_join_qrcode:
+  - 'one'
+  - 'two'
+  - 'three'
+  - 'four'
+  - 'five'
+  - 'six'
+  - 'seven'
+
+#获取企业活跃成员数
+get_active_stat:
+  - ["2021-06-27",0]
+  - ["2021-06-17",0]
+  - ["2021-03-27",40058]
+ids_get_active_stat:
+  - 'one'
+  - 'two'
+  - 'three'
